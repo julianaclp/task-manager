@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
     delta_time = (((float)rand()) / RAND_MAX)*max_delta;
     /*Executar as tarefas aqui*/
     total_time += delta_time;
-    printf("%f\n", total_time);
+    printf("%f %f\n", delta_time, total_time);
     if(total_time > execution_time) break;
     sleep(delta_time);
   }
