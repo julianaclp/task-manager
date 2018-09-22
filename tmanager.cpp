@@ -10,12 +10,12 @@ int main(int argc, char const *argv[]) {
   float delta_time, val, total_time = 0.00;
   printf("Digite o tempo de execucao da simulacao\n");
   scanf("%d", &execution_time);
-  //printf("Digite o tamanho maximo da memoria\n");
-  //scanf("%d", &memory_size);
+  printf("Digite o tamanho maximo da memoria\n");
+  scanf("%d", &memory_size);
   printf("Digite o intervalo maximo de execucao das tarefas\n");
   scanf("%d", &max_delta);
-  /*printf("Digite o tempo necessario para a execucao de um byte da tarefa\n");
-  scanf("%d", &speed);*/
+  printf("Digite o tempo necessario para a execucao de um byte da tarefa\n");
+  scanf("%d", &speed);
 
   /*Aloca espaço da memória*/
   memory = (int *) malloc(sizeof(int)*memory_size);
@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
     delta_time = (((float)rand()) / RAND_MAX)*max_delta;
     /*Executar as tarefas aqui*/
     total_time += delta_time;
-    printf("%f\n", total_time);
+
     if(total_time > execution_time) break;
     sleep(delta_time);
   }
